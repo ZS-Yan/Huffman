@@ -1,0 +1,8 @@
+# ninja log v5
+0	237	1638619921089092971	CMakeFiles/Huffman_example.dir/main_window.c.o	21cc856fa5e89e48
+0	230	1638619921081095429	CMakeFiles/Huffman_example.dir/main.c.o	256497189273d43
+237	312	1638619921161070846	Huffman_example	e2c8011bd88d1249
+2	12	1638625918080901523	CMakeFiles/Huffman_example.dir/Encode.c.o	11b17b3116e5d533
+1	203	1638625918268890955	CMakeFiles/Huffman_example.dir/main.c.o	256497189273d43
+2	212	1638625918280890281	CMakeFiles/Huffman_example.dir/main_window.c.o	21cc856fa5e89e48
+212	285	1638625918352886233	Huffman_example	8566b58af8829ba0
