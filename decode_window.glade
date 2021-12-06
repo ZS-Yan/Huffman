@@ -25,12 +25,13 @@
         <child>
           <object class="GtkLabel">
             <property name="width_request">740</property>
-            <property name="height_request">162</property>
+            <property name="height_request">216</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">              欢迎使用Huffman译码器！
                           您可以选择
-1.输入需要译码的字符     2.从文件导入</property>
+1.输入需要译码的字符     2.从文件导入
+              请首先导入译码的规则</property>
             <attributes>
               <attribute name="style" value="normal"/>
               <attribute name="weight" value="bold"/>
@@ -39,8 +40,8 @@
             </attributes>
           </object>
           <packing>
-            <property name="x">139</property>
-            <property name="y">40</property>
+            <property name="x">144</property>
+            <property name="y">12</property>
           </packing>
         </child>
         <child>
@@ -59,7 +60,7 @@
           </object>
           <packing>
             <property name="x">122</property>
-            <property name="y">233</property>
+            <property name="y">231</property>
           </packing>
         </child>
         <child>
@@ -78,21 +79,7 @@
           </object>
           <packing>
             <property name="x">177</property>
-            <property name="y">346</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="import_button">
-            <property name="label" translatable="yes">导入译码文件</property>
-            <property name="width_request">124</property>
-            <property name="height_request">53</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="x">30</property>
-            <property name="y">420</property>
+            <property name="y">370</property>
           </packing>
         </child>
         <child>
@@ -105,21 +92,21 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">30</property>
-            <property name="y">515</property>
+            <property name="x">33</property>
+            <property name="y">550</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="decode_entry">
             <property name="width_request">548</property>
-            <property name="height_request">70</property>
+            <property name="height_request">37</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">(请输入您需要进行译码的文本)</property>
           </object>
           <packing>
             <property name="x">350</property>
-            <property name="y">238</property>
+            <property name="y">246</property>
           </packing>
         </child>
         <child>
@@ -132,8 +119,69 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">30</property>
-            <property name="y">618</property>
+            <property name="x">33</property>
+            <property name="y">628</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="result_entry">
+            <property name="width_request">548</property>
+            <property name="height_request">37</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="editable">False</property>
+            <property name="placeholder_text" translatable="yes">(译码结果显示于此)</property>
+          </object>
+          <packing>
+            <property name="x">349</property>
+            <property name="y">302</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">193</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Huffman译码结果为：</property>
+            <attributes>
+              <attribute name="style" value="normal"/>
+              <attribute name="weight" value="bold"/>
+              <attribute name="scale" value="1.3"/>
+              <attribute name="foreground" value="#ffffffffffff"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">140</property>
+            <property name="y">278</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="import_button">
+            <property name="label" translatable="yes">导入译码文件</property>
+            <property name="width_request">124</property>
+            <property name="height_request">53</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">473</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="import_encode_button">
+            <property name="label" translatable="yes">导入编码规则</property>
+            <property name="width_request">124</property>
+            <property name="height_request">53</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">33</property>
+            <property name="y">395</property>
           </packing>
         </child>
       </object>

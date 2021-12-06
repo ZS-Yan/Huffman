@@ -1,4 +1,4 @@
-/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/god/Projects/Huffman_example
+/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/god/Projects/Huffman
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/god/Projects/Huffman_example/cmake-build-debug
+-- Build files have been written to: /home/god/Projects/Huffman/cmake-build-debug

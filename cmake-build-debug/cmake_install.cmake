@@ -1,4 +1,4 @@
-# Install script for directory: /home/god/Projects/Huffman_example
+# Install script for directory: /home/god/Projects/Huffman
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/god/Projects/Huffman_example/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/god/Projects/Huffman/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

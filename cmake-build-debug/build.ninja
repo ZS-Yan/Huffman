@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Huffman_example
+# Project: Huffman
 # Configurations: Debug
 # =============================================================================
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/god/Projects/Huffman_example/cmake-build-debug/
+cmake_ninja_workdir = /home/god/Projects/Huffman/cmake-build-debug/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/god/Projects/Huffman_example/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/god/Projects/Huffman/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/god/Projects/Huffman_example/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/god/Projects/Huffman_example -B/home/god/Projects/Huffman_example/cmake-build-debug
+  COMMAND = cd /home/god/Projects/Huffman/cmake-build-debug && /snap/clion/175/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/god/Projects/Huffman -B/home/god/Projects/Huffman/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -64,51 +64,51 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Huffman_example
+# Object build statements for EXECUTABLE target Huffman
 
 
 #############################################
-# Order-only phony target for Huffman_example
+# Order-only phony target for Huffman
 
-build cmake_object_order_depends_target_Huffman_example: phony || CMakeFiles/Huffman_example.dir
+build cmake_object_order_depends_target_Huffman: phony || CMakeFiles/Huffman.dir
 
-build CMakeFiles/Huffman_example.dir/main.c.o: C_COMPILER__Huffman_example_Debug /home/god/Projects/Huffman_example/main.c || cmake_object_order_depends_target_Huffman_example
-  DEP_FILE = CMakeFiles/Huffman_example.dir/main.c.o.d
+build CMakeFiles/Huffman.dir/main.c.o: C_COMPILER__Huffman_Debug /home/god/Projects/Huffman/main.c || cmake_object_order_depends_target_Huffman
+  DEP_FILE = CMakeFiles/Huffman.dir/main.c.o.d
   FLAGS = -g   -pthread -std=gnu99
   INCLUDES = -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-  OBJECT_DIR = CMakeFiles/Huffman_example.dir
-  OBJECT_FILE_DIR = CMakeFiles/Huffman_example.dir
+  OBJECT_DIR = CMakeFiles/Huffman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Huffman.dir
 
-build CMakeFiles/Huffman_example.dir/main_window.c.o: C_COMPILER__Huffman_example_Debug /home/god/Projects/Huffman_example/main_window.c || cmake_object_order_depends_target_Huffman_example
-  DEP_FILE = CMakeFiles/Huffman_example.dir/main_window.c.o.d
+build CMakeFiles/Huffman.dir/main_window.c.o: C_COMPILER__Huffman_Debug /home/god/Projects/Huffman/main_window.c || cmake_object_order_depends_target_Huffman
+  DEP_FILE = CMakeFiles/Huffman.dir/main_window.c.o.d
   FLAGS = -g   -pthread -std=gnu99
   INCLUDES = -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-  OBJECT_DIR = CMakeFiles/Huffman_example.dir
-  OBJECT_FILE_DIR = CMakeFiles/Huffman_example.dir
+  OBJECT_DIR = CMakeFiles/Huffman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Huffman.dir
 
-build CMakeFiles/Huffman_example.dir/Encode.c.o: C_COMPILER__Huffman_example_Debug /home/god/Projects/Huffman_example/Encode.c || cmake_object_order_depends_target_Huffman_example
-  DEP_FILE = CMakeFiles/Huffman_example.dir/Encode.c.o.d
+build CMakeFiles/Huffman.dir/Encode.c.o: C_COMPILER__Huffman_Debug /home/god/Projects/Huffman/Encode.c || cmake_object_order_depends_target_Huffman
+  DEP_FILE = CMakeFiles/Huffman.dir/Encode.c.o.d
   FLAGS = -g   -pthread -std=gnu99
   INCLUDES = -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
-  OBJECT_DIR = CMakeFiles/Huffman_example.dir
-  OBJECT_FILE_DIR = CMakeFiles/Huffman_example.dir
+  OBJECT_DIR = CMakeFiles/Huffman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Huffman.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Huffman_example
+# Link build statements for EXECUTABLE target Huffman
 
 
 #############################################
-# Link the executable Huffman_example
+# Link the executable Huffman
 
-build Huffman_example: C_EXECUTABLE_LINKER__Huffman_example_Debug CMakeFiles/Huffman_example.dir/main.c.o CMakeFiles/Huffman_example.dir/main_window.c.o CMakeFiles/Huffman_example.dir/Encode.c.o
+build Huffman: C_EXECUTABLE_LINKER__Huffman_Debug CMakeFiles/Huffman.dir/main.c.o CMakeFiles/Huffman.dir/main_window.c.o CMakeFiles/Huffman.dir/Encode.c.o
   FLAGS = -g
   LINK_LIBRARIES = -lgtk-3  -lgdk-3  -lpangocairo-1.0  -lpango-1.0  -lharfbuzz  -latk-1.0  -lcairo-gobject  -lcairo  -lgdk_pixbuf-2.0  -lgio-2.0  -lgobject-2.0  -lglib-2.0
-  OBJECT_DIR = CMakeFiles/Huffman_example.dir
+  OBJECT_DIR = CMakeFiles/Huffman.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Huffman_example
-  TARGET_PDB = Huffman_example.dbg
+  TARGET_FILE = Huffman
+  TARGET_PDB = Huffman.dbg
 
 # =============================================================================
 # Target aliases.
@@ -119,9 +119,9 @@ build Huffman_example: C_EXECUTABLE_LINKER__Huffman_example_Debug CMakeFiles/Huf
 # =============================================================================
 
 #############################################
-# Folder: /home/god/Projects/Huffman_example/cmake-build-debug
+# Folder: /home/god/Projects/Huffman/cmake-build-debug
 
-build all: phony Huffman_example
+build all: phony Huffman
 
 # =============================================================================
 # Built-in targets
