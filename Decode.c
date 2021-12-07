@@ -44,7 +44,7 @@ void huffman_decode_from_file(FILE *ip, HTreeNode *HuffmanNode[], int root_locat
     char *flag;
     flag = string;
     int p = root_location;
-    printf("%d\n", p);
+//    printf("%d\n", p);
     while (*flag != '\0')
     {
         // printf("%c", *flag);

@@ -8,6 +8,7 @@
 
 #include <gtk/gtk.h>
 #include "huffman.h"
+
 typedef struct {
     GtkWidget *window;
     GtkWidget *text_view;
@@ -20,7 +21,13 @@ typedef struct {
     HCode *HuffmanCode[100];
     int root_location;
     GtkWidget *text_view;
-}decode_passing_parameters;
+} decode_passing_parameters;
+
+typedef struct {
+    GtkWidget *dialog;
+    GtkWidget *text_view;
+} passing_parameters2;
+
 GtkWidget *create_Enter_window();
 
 void on_Enter_button_clicked(GtkWidget *button, gpointer window);
@@ -41,19 +48,20 @@ void on_encode_import_button_clicked(GtkWidget *button, encode_import_passing_pa
 
 void on_encode_export_button_clicked(GtkWidget *button, encode_import_passing_parameters *parameters);
 
-void on_export_file_button_clicked(GtkWidget *button, encode_import_passing_parameters *parameters);
+void on_export_file_button_clicked(GtkWidget *button,passing_parameters2 *parameters2);
 
-void on_return_button_clicked(GtkWidget *button, gpointer window);
+        void on_return_button_clicked(GtkWidget *button, gpointer window);
 
 GtkWidget *create_decode_window();
 
-void on_import_encode_button_clicked(GtkWidget *button,decode_passing_parameters *parameters);
+void on_import_encode_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
 
-void on_decode_entry_activate(GtkWidget *entry, decode_passing_parameters * parameters);
+void on_decode_entry_activate(GtkWidget *entry, decode_passing_parameters *parameters);
 
 void on_decode_import_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
 
 void on_decode_export_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
-void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_parameters*parameters);
+
+void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
 
 #endif //HUFFMAN_MAIN_WINDOW_H
