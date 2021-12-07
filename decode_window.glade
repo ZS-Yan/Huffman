@@ -74,6 +74,7 @@
               <object class="GtkTextView" id="text_view">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="editable">False</property>
               </object>
             </child>
           </object>
@@ -172,7 +173,7 @@
         </child>
         <child>
           <object class="GtkButton" id="import_encode_button">
-            <property name="label" translatable="yes">导入编码规则</property>
+            <property name="label" translatable="yes">导入编码集</property>
             <property name="width_request">124</property>
             <property name="height_request">53</property>
             <property name="visible">True</property>

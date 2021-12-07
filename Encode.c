@@ -42,12 +42,14 @@ Huffmancode *huffman_encode_from_string(char *string) {
                     Code->huffman_code[Code->code_length++] = HuffmanCode[j]->bit[k];
 //                    huffman_code[locationFlag++] = HuffmanCode[j]->bit[k];
                 }
+                break;
             }
         }
     }
     Code->huffman_code[Code->code_length] = '\0';
     return Code;
 }
+
 /**
  * Read data from txt file
  * @param ip the pointer to file
@@ -55,11 +57,11 @@ Huffmancode *huffman_encode_from_string(char *string) {
  */
 Huffmancode *huffman_encode_from_file(FILE *ip) {
     HTreeNode *HuffmanNode[500]; //存放哈夫曼树
-    char string[1000];
+    char string[3000];
     char buffer[200];
     unsigned int line_len = 0;
-    while(fgets(buffer, N, ip)) {
-        strcpy(&string[line_len],buffer);
+    while (fgets(buffer, N, ip)) {
+        strcpy(&string[line_len], buffer);
         line_len += strlen(buffer);
     }
     HCode *HuffmanCode[100]; //存放哈夫曼字符集编码
@@ -76,7 +78,7 @@ Huffmancode *huffman_encode_from_file(FILE *ip) {
                 for (int k = HuffmanCode[j]->start - 1; k >= 0; k--) //倒序输出
                 {
                     Code->huffman_code[Code->code_length++] = HuffmanCode[j]->bit[k];
-                    if ((Code->code_length + 1) % 95 == 0 && Code->code_length > 0) //0-94 95-189
+                    if ((Code->code_length + 1) % 96 == 0 && Code->code_length > 0) //0-94 95-189
                     {
                         Code->huffman_code[Code->code_length++] = '\n';
                     }
@@ -131,8 +133,9 @@ int generate_huffmanNode(char *string, HTreeNode *HuffmanNode[]) {
  * 生成HuffmanTree
  * @param HuffmanNode HuffmanTree
  * @param uniqueChar_num initial number of the HuffmanTree
+ * @return the root node index of the created HuffmanTree
  */
-void generate_huffmanTree(HTreeNode *HuffmanNode[], int uniqueChar_num) {
+int generate_huffmanTree(HTreeNode *HuffmanNode[], int uniqueChar_num) {
     int processing_node = uniqueChar_num; //处理过的节点个数
     for (; processing_node != 1;) //找出两个权值最小的节点
     {
@@ -164,6 +167,9 @@ void generate_huffmanTree(HTreeNode *HuffmanNode[], int uniqueChar_num) {
         uniqueChar_num += 1;
         processing_node = processing_node - 2 + 1;
     }
+    int root_location = uniqueChar_num - 1;
+    // printf("%d",root_location);
+    return root_location;
 }
 
 /**

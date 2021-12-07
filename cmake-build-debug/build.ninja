@@ -93,6 +93,13 @@ build CMakeFiles/Huffman.dir/Encode.c.o: C_COMPILER__Huffman_Debug /home/god/Pro
   OBJECT_DIR = CMakeFiles/Huffman.dir
   OBJECT_FILE_DIR = CMakeFiles/Huffman.dir
 
+build CMakeFiles/Huffman.dir/Decode.c.o: C_COMPILER__Huffman_Debug /home/god/Projects/Huffman/Decode.c || cmake_object_order_depends_target_Huffman
+  DEP_FILE = CMakeFiles/Huffman.dir/Decode.c.o.d
+  FLAGS = -g   -pthread -std=gnu99
+  INCLUDES = -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+  OBJECT_DIR = CMakeFiles/Huffman.dir
+  OBJECT_FILE_DIR = CMakeFiles/Huffman.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Huffman
@@ -101,7 +108,7 @@ build CMakeFiles/Huffman.dir/Encode.c.o: C_COMPILER__Huffman_Debug /home/god/Pro
 #############################################
 # Link the executable Huffman
 
-build Huffman: C_EXECUTABLE_LINKER__Huffman_Debug CMakeFiles/Huffman.dir/main.c.o CMakeFiles/Huffman.dir/main_window.c.o CMakeFiles/Huffman.dir/Encode.c.o
+build Huffman: C_EXECUTABLE_LINKER__Huffman_Debug CMakeFiles/Huffman.dir/main.c.o CMakeFiles/Huffman.dir/main_window.c.o CMakeFiles/Huffman.dir/Encode.c.o CMakeFiles/Huffman.dir/Decode.c.o
   FLAGS = -g
   LINK_LIBRARIES = -lgtk-3  -lgdk-3  -lpangocairo-1.0  -lpango-1.0  -lharfbuzz  -latk-1.0  -lcairo-gobject  -lcairo  -lgdk_pixbuf-2.0  -lgio-2.0  -lgobject-2.0  -lglib-2.0
   OBJECT_DIR = CMakeFiles/Huffman.dir

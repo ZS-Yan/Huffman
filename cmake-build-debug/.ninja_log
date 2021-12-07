@@ -6,3 +6,8 @@
 2	221	1638705950366897489	CMakeFiles/Huffman_example.dir/main_window.c.o	65216f425f2f7
 1	210	1638705950358896962	CMakeFiles/Huffman_example.dir/main.c.o	b8f97be61b05e2db
 2	220	1638716204835294048	CMakeFiles/Huffman.dir/main_window.c.o	c23f806b1084e9da
+1	32	1638840149679790659	CMakeFiles/Huffman.dir/Encode.c.o	19788eac32f645a0
+1	36	1638840149683790806	CMakeFiles/Huffman.dir/Decode.c.o	a16f8120a154c018
+1	203	1638840149851797001	CMakeFiles/Huffman.dir/main.c.o	b9ad0c9b43a33327
+1	223	1638840149871797738	CMakeFiles/Huffman.dir/main_window.c.o	c23f806b1084e9da
+223	293	1638840149939800246	Huffman	b9a19e7d944563b6
