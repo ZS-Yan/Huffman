@@ -14,9 +14,8 @@ GtkWidget *create_Enter_window() //创建进入窗口
 
     // gtk_init(&argc,&argv);
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "Enter_window.glade",
+    gtk_builder_add_from_file(builder, "/home/god/Projects/Huffman/Enter_window.glade",
                               NULL); //从glade获取控件
-
     Enter_window = GTK_WIDGET(gtk_builder_get_object(builder, "Enter_window")); //获取主窗体
     // gtk_window_set_icon(GTK_WINDOW(Enter_window),
     // create_pixbuf("addressbook.png"));//设置软件图标
@@ -61,7 +60,7 @@ void on_About_button_clicked(GtkWidget *button, gpointer window) {}
 GtkWidget *create_main_window() {
     GtkBuilder *builder; //新建一个GtkBuilder对象用于读取GtkBuilder界面文件
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "main_window.glade", NULL); //从glade获取控件
+    gtk_builder_add_from_file(builder, "/home/god/Projects/Huffman/main_window.glade", NULL); //从glade获取控件
     GtkWidget *main_window = GTK_WIDGET(gtk_builder_get_object(builder, "main_window")); //获取系统窗体
 //      gtk_window_set_icon(GTK_WINDOW(main_window),create_pixbuf("addressbook.png"));
     GtkWidget *encode_button = GTK_WIDGET(gtk_builder_get_object(builder, "encode_button")); //获取系统窗口中的“编码”按钮
@@ -91,7 +90,7 @@ void on_decode_button_clicked(GtkWidget *button, gpointer window) {
 GtkWidget *create_encode_window() {
     GtkBuilder *builder;
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "encode_window.glade", NULL); //从glade获取控件
+    gtk_builder_add_from_file(builder, "/home/god/Projects/Huffman/encode_window.glade", NULL); //从glade获取控件
     GtkWidget *encode_window = GTK_WIDGET(gtk_builder_get_object(builder, "encode_window")); //获取系统窗体
 //      gtk_window_set_icon(GTK_WINDOW(main_window),create_pixbuf("addressbook.png"));
     GtkWidget *encode_entry = GTK_WIDGET(gtk_builder_get_object(builder, "encode_entry"));
@@ -241,7 +240,9 @@ void on_return_button_clicked(GtkWidget *button, gpointer window) {
 GtkWidget *create_decode_window() {
     GtkBuilder *builder;
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "decode_window.glade", NULL); //从glade获取控件
+    //此处用绝对路径的原因是：在IDE中，cmake生成的可执行文件与源码并不在同一个目录下，而终端执行时并没有这样的问题
+    //https://blog.csdn.net/qq_41437512/article/details/119700812
+    gtk_builder_add_from_file(builder, "/home/god/Projects/Huffman/decode_window.glade", NULL); //从glade获取控件
     GtkWidget *decode_window = GTK_WIDGET(gtk_builder_get_object(builder, "decode_window")); //获取系统窗体
 //      gtk_window_set_icon(GTK_WINDOW(main_window),create_pixbuf("addressbook.png"));
     GtkWidget *decode_entry = GTK_WIDGET(gtk_builder_get_object(builder, "decode_entry"));
