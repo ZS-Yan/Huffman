@@ -62,6 +62,6 @@ void on_decode_import_button_clicked(GtkWidget *button, decode_passing_parameter
 
 void on_decode_export_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
 
-void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_parameters *parameters);
+void on_decode_export_file_button_clicked(GtkWidget *button, passing_parameters2 *parameters);
 
 #endif //HUFFMAN_MAIN_WINDOW_H

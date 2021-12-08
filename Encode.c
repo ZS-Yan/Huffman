@@ -58,7 +58,7 @@ Huffmancode *huffman_encode_from_string(char *string) {
 Huffmancode *huffman_encode_from_file(FILE *ip) {
     HTreeNode *HuffmanNode[500]; //存放哈夫曼树
     char string[3000];
-    char buffer[200];
+    char buffer[300];
     unsigned int line_len = 0;
     while (fgets(buffer, N, ip)) {
         strcpy(&string[line_len], buffer);

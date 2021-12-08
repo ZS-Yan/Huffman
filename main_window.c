@@ -206,6 +206,7 @@ void on_export_file_button_clicked(GtkWidget *button, passing_parameters2 *param
         } else {
             char *output_file_location = (char *)malloc(sizeof(char)*200);
             strcpy(output_file_location,foldername);
+            //https://www.linuxquestions.org/questions/programming-9/why-do-i-get-corrupted-memory-error-free-invalid-next-size-fast-875737/
             output_file_location = strcat(output_file_location, "/Huffman_Encode_Result.txt");//strcat函数改变了foldername的内存占用
             FILE *op;
             op = fopen(output_file_location, "w");
@@ -292,7 +293,7 @@ void on_import_encode_button_clicked(GtkWidget *button, decode_passing_parameter
             gtk_widget_destroy(warning_dialog);
         } else {
             char string[3000];
-            char buffer[200];
+            char buffer[300];
             unsigned int line_len = 0;
             while (fgets(buffer, N, ph)) {
                 strcpy(&string[line_len], buffer);
@@ -372,19 +373,22 @@ void on_decode_export_button_clicked(GtkWidget *button, decode_passing_parameter
                                     GTK_BUTTONS_CANCEL, "请选择导出文件位置");
     gtk_window_set_title(GTK_WINDOW(dialog), "提示");
     export_file_button = gtk_dialog_add_button(GTK_DIALOG(dialog), "选择文件夹../", 0);
-    parameters->window = dialog;
-    g_signal_connect(export_file_button, "clicked", G_CALLBACK(on_decode_export_file_button_clicked), parameters);
+//    parameters->window = dialog;
+    passing_parameters2 *parameters2 = (passing_parameters2 *) malloc(sizeof(passing_parameters2));
+    parameters2->text_view = parameters->text_view;
+    parameters2->dialog = dialog;
+    g_signal_connect(export_file_button, "clicked", G_CALLBACK(on_decode_export_file_button_clicked), parameters2);
     gtk_dialog_run(GTK_DIALOG(dialog));
     gtk_widget_destroy(dialog);
 }
 
 //TODO:数组太大溢出的问题
 
-void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_parameters *parameters) {
+void on_decode_export_file_button_clicked(GtkWidget *button, passing_parameters2 *parameters) {
     GtkWidget *folder_select_dialog;
     GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER;
     gint res;
-    folder_select_dialog = gtk_file_chooser_dialog_new("Open Folder", GTK_WINDOW(parameters->window), action, "_取消",
+    folder_select_dialog = gtk_file_chooser_dialog_new("Open Folder", GTK_WINDOW(parameters->dialog), action, "_取消",
                                                        GTK_RESPONSE_CANCEL, "_确定", GTK_RESPONSE_ACCEPT, NULL);
     res = gtk_dialog_run(GTK_DIALOG(folder_select_dialog));
     if (res == GTK_RESPONSE_ACCEPT) {
@@ -394,13 +398,17 @@ void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_para
 //        printf("%s\n", foldername);
         if (foldername == NULL) {
             GtkWidget *error_dialog;
-            error_dialog = gtk_message_dialog_new(GTK_WINDOW(parameters->window), GTK_DIALOG_DESTROY_WITH_PARENT,
+            error_dialog = gtk_message_dialog_new(GTK_WINDOW(parameters->dialog), GTK_DIALOG_DESTROY_WITH_PARENT,
                                                   GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "请选择正确的路径！");
             gtk_window_set_title(GTK_WINDOW(error_dialog), "Error");
             gtk_dialog_run(GTK_DIALOG(error_dialog));
             gtk_widget_destroy(error_dialog);
         } else {
-            char *output_file_location = strcat(foldername, "/Huffman_Decode_Result.txt");
+            char *output_file_location = (char *)malloc(sizeof(char)*200);
+            strcpy(output_file_location,foldername);
+            //https://www.linuxquestions.org/questions/programming-9/why-do-i-get-corrupted-memory-error-free-invalid-next-size-fast-875737/
+            output_file_location = strcat(output_file_location, "/Huffman_Decode_Result.txt");//strcat函数改变了foldername的内存占用
+//            char *output_file_location = strcat(foldername, "/Huffman_Decode_Result.txt");
             FILE *op;
             op = fopen(output_file_location, "w");
             GtkTextBuffer *buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(parameters->text_view));
@@ -411,11 +419,12 @@ void on_decode_export_file_button_clicked(GtkWidget *button, decode_passing_para
             fprintf(op, "%s", Code);
             fclose(op);
             GtkWidget *promptdialog;
-            promptdialog = gtk_message_dialog_new(GTK_WINDOW(parameters->window), GTK_DIALOG_DESTROY_WITH_PARENT,
+            promptdialog = gtk_message_dialog_new(GTK_WINDOW(parameters->dialog), GTK_DIALOG_DESTROY_WITH_PARENT,
                                                   GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "导出成功！");
             gtk_window_set_title(GTK_WINDOW(promptdialog), "提示");
             gtk_dialog_run(GTK_DIALOG(promptdialog));
             gtk_widget_destroy(promptdialog);
+            g_free(output_file_location);
         }
         g_free(foldername);
 
